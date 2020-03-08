@@ -4,10 +4,10 @@
             <div class="[card]">
                 <div class="recipe">
                 <h1>Recipes</h1>
-                <img: src="data.results.thumbnail">
-                <h2>Title: {{ data.results.title }}</h2>
-                <p>Ingredients{{ data.results.ingredients }}</p>
-                <a href="data.results.href"></a>
+                <img: src="api.data.results.thumbnail">
+                <h2>Title: {{ api.data.results.title }}</h2>
+                <p>Ingredients{{ api.data.results.ingredients }}</p>
+                <a href="#">Link: {{ api.data.results.href }}</a>
                     </div>
                 </div>
             </div>
@@ -17,6 +17,7 @@
 <script>
 import axios from 'axios';
 export default {
+name: 'app',
   data () {
     return {
       api: []
