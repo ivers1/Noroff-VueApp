@@ -15,18 +15,17 @@ import axios from 'axios'
 export default {
   data () {
     return {
-      wholeResponse: [],
-      loading: true
+      api: []
     }
   },
   mounted () {
   axios
-    .get('http://https://www.recipepuppy.com/api/results')
-    .then(response => {
-      this.loading = false
+    .get('http://www.recipepuppy.com/api')
+    .then(function(res){
+      console.log('data: ',res);
     })
-    .catch(error => {
-      console.log(error)
+    .catch(function(error){
+      console.log('error: ', error);
     })
   }
 }
