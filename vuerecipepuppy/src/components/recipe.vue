@@ -37,7 +37,5 @@ name: 'app',
 </script>
 
 <style>
-img{
-max-width: 50vw;
-}
+
 </style>
