@@ -4,6 +4,10 @@
             <div class="[card]">
                 <div class="recipe">
                 <h1>Recipes</h1>
+                <img: src="data.results.thumbnail">
+                <h2>Title: {{ data.results.title }}</h2>
+                <p>Ingredients{{ data.results.ingredients }}</p>
+                <a href="data.results.href"></a>
                     </div>
                 </div>
             </div>
@@ -11,7 +15,7 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from 'axios';
 export default {
   data () {
     return {
@@ -20,7 +24,7 @@ export default {
   },
   mounted () {
   axios
-    .get('http://www.recipepuppy.com/api')
+    .get('https://cors-anywhere.herokuapp.com/http://www.recipepuppy.com/api')
     .then(function(res){
       console.log('data: ',res);
     })
@@ -30,3 +34,9 @@ export default {
   }
 }
 </script>
+
+<style>
+img{
+max-width: 50vw;
+}
+</style>
